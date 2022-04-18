@@ -41,7 +41,7 @@ export const Provider: FC = ({ children }) => {
   const update = async () => {
     const token = Cookies.get("token");
     const data = await (
-      await axios.post("http://localhost:3000/myproducts", { token: token })
+      await axios.post("https://www.api.cool-meet.xyz/myproducts", { token: token })
     ).data;
     setCount(data.length);
     setProducts(data);

@@ -10,7 +10,7 @@ const Item: NextPage<itemType> = ({img,name,category,price}) => {
   const {setCount} = useContext(Context);
   const add = async() =>{
     const token = Cookies.get('token');
-    const res = await (await axios.post("http://localhost:3000/products", {token:token,name,category,price,img})).data;
+    const res = await (await axios.post("https://www.api.cool-meet.xyz/products", {token:token,name,category,price,img})).data;
     alert(res);
     setCount(old=>old+1);
   }

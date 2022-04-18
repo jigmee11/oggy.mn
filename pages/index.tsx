@@ -31,7 +31,7 @@ const Home: NextPage = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     const getAll = async () =>{
-      const data = await (await axios.get("http://localhost:3000/allproducts")).data;
+      const data = await (await axios.get("https://www.api.cool-meet.xyz/allproducts")).data;
       setProducts(data);
     }
     getAll();

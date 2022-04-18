@@ -17,7 +17,7 @@ const Header: NextPage = () => {
       const token = Cookies.get("token");
       if (token != undefined && token != "undefined") {
         const data = await (
-          await axios.post("http://localhost:3000/welcome", { token: token })
+          await axios.post("https://www.api.cool-meet.xyz/welcome", { token: token })
         ).data;
         if (data) {
           setSigned(data.name);
@@ -29,7 +29,7 @@ const Header: NextPage = () => {
     const getData = async () => {
       const token = Cookies.get("token");
       const data = await (
-        await axios.post("http://localhost:3000/myproducts", { token: token })
+        await axios.post("https://www.api.cool-meet.xyz/myproducts", { token: token })
       ).data;
       setCount(data.length);
       setProducts(data);

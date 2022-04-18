@@ -20,7 +20,7 @@ const Cart = () => {
               onClick={() => {
                 const token = Cookies.get("token");
                 axios
-                  .post("http://localhost:3000/buy", { token })
+                  .post("https://www.api.cool-meet.xyz/buy", { token })
                   .then(() =>{
                     setProducts([]);
                     setCount(0);

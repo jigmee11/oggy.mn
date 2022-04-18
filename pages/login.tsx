@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       const token = Cookies.get("token");
       if (token!=undefined&&token!='undefined') {
         const data = await (
-          await axios.post("http://localhost:3000/welcome", { token })
+          await axios.post("https://www.api.cool-meet.xyz/welcome", { token })
         ).data;
         if(data){
           Cookies.set('/token',data.token);
@@ -26,7 +26,7 @@ const Home: NextPage = () => {
   },[]);
   const login = async()=>{
     try{
-      const data = await (await axios.post('http://localhost:3000/login',{name,password})).data;
+      const data = await (await axios.post('https://www.api.cool-meet.xyz/login',{name,password})).data;
       Cookies.set('token',data.token);
       router.replace("/");
     }

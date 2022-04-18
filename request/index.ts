@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 
 export const Post = async (url:string,type:"POST"|"GET", data:any) => {
-  const response = await fetch(`http://localhost:3000/${url}`, {
+  const response = await fetch(`https://www.api.cool-meet.xyz/${url}`, {
     method: type, // *GET, POST, PUT, DELETE, etc.
     headers: {
       "Content-Type": "application/json",
